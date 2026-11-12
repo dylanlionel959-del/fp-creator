@@ -1,1 +1,13 @@
-
+{
+  "geode": "5.11.2",
+  "gd": {
+    "win": "2.2081",
+    "android": "2.2081"
+  },
+  "id": "Maxr3.frame-perfect-editor",
+  "name": "Frame Perfect Creator",
+  "version": "v1.0.0",
+  "developer": "Maxr3",
+  "description": "Precision and TPS tools for creators inside the level editor.",
+  "icon": "icon.png"
+}
