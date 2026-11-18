@@ -6,8 +6,63 @@
   },
   "id": "Maxr3.frame-perfect-editor",
   "name": "Frame Perfect Creator",
-  "version": "v1.0.0",
+  "version": "v1.1.0",
   "developer": "Maxr3",
-  "description": "Precision and TPS tools for creators inside the level editor.",
-  "icon": "icon.png"
+  "description": "Crea saltos frame perfect segun FPS / Hz, TPS y hitboxes, con margenes de error.",
+  "settings": {
+    "play-fps": {
+      "type": "int",
+      "name": "FPS / Hz con los que juegas",
+      "description": "Los FPS (o Hz del monitor) a los que vas a jugar el nivel.",
+      "default": 120,
+      "min": 1,
+      "max": 1000
+    },
+    "design-fps": {
+      "type": "int",
+      "name": "FPS para los que lo diseñas",
+      "description": "Los FPS que pones en el mod (ej. 60 o 30).",
+      "default": 60,
+      "min": 1,
+      "max": 1000
+    },
+    "tps": {
+      "type": "int",
+      "name": "TPS",
+      "description": "Ticks de fisica por segundo. Un tick es la unidad minima de movimiento (margen 0).",
+      "default": 240,
+      "min": 1,
+      "max": 10000
+    },
+    "speed": {
+      "type": "string",
+      "name": "Velocidad",
+      "default": "1x",
+      "one-of": ["0.7x", "1x", "2x", "3x", "4x"]
+    },
+    "margin-override": {
+      "type": "int",
+      "name": "Margen manual",
+      "description": "-1 = automatico segun FPS. 0 o mas = fuerza ese numero de margenes.",
+      "default": -1,
+      "min": -1,
+      "max": 20
+    },
+    "air-time": {
+      "type": "float",
+      "name": "Tiempo en el aire (s)",
+      "description": "Duracion de un salto de cubo en segundos. Valor aproximado: calibralo con una prueba.",
+      "default": 0.38,
+      "min": 0.05,
+      "max": 2.0
+    },
+    "hitbox-width": {
+      "type": "float",
+      "name": "Ancho hitbox del jugador",
+      "description": "Ancho de la hitbox del jugador en unidades (cubo = 30).",
+      "default": 30.0,
+      "min": 1.0,
+      "max": 100.0
+    }
+  }
 }
